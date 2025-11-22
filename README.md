@@ -32,9 +32,10 @@ Flight-delay/
 │       ├── flights_active.parquet
 │       └── flights_cancelled.parquet
 ├── notebooks/
-│   ├── data_ingestion_cleaning.ipynb   # Phase 1: Data loading & cleaning
-│   ├── eda_analysis.ipynb              # Phase 2: EDA (skeleton - deprecated)
-│   └── 02_eda_analysis.ipynb           # Phase 2: Feature Engineering & EDA (complete)
+│   ├── data_ingestion_cleaning.ipynb        # Phase 1: Data loading & cleaning
+│   ├── eda_analysis.ipynb                   # Phase 2: EDA (skeleton - deprecated)
+│   ├── 02_eda_analysis.ipynb                # Phase 2: Feature Engineering & EDA (complete)
+│   └── 03_geospatial_anomaly_analysis.ipynb # Advanced: Geospatial & Holiday Analysis
 ├── src/
 │   ├── utils.py                  # Reusable data processing functions
 │   └── download_instructions.md  # Dataset download guide
