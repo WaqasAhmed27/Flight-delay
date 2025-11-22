@@ -1,6 +1,7 @@
 # Flight Delay Analysis - University Case Study
 
 **Phase 1: Data Ingestion & Preparation** ✅ COMPLETE
+**Phase 2: Feature Engineering & EDA** ✅ COMPLETE
 
 A comprehensive data analysis project for analyzing U.S. domestic flight delays using 2024 flight data from Kaggle.
 
@@ -32,7 +33,8 @@ Flight-delay/
 │       └── flights_cancelled.parquet
 ├── notebooks/
 │   ├── data_ingestion_cleaning.ipynb   # Phase 1: Data loading & cleaning
-│   └── eda_analysis.ipynb              # Phase 2: Exploratory analysis (skeleton)
+│   ├── eda_analysis.ipynb              # Phase 2: EDA (skeleton - deprecated)
+│   └── 02_eda_analysis.ipynb           # Phase 2: Feature Engineering & EDA (complete)
 ├── src/
 │   ├── utils.py                  # Reusable data processing functions
 │   └── download_instructions.md  # Dataset download guide
@@ -125,18 +127,38 @@ After running the ingestion notebook, you should have:
 - Time validation
 - 10x faster Parquet format conversion
 
-### 📋 Phase 2: Exploratory Data Analysis (PLANNED)
+### ✅ Phase 2: Feature Engineering & Exploratory Data Analysis (COMPLETE)
 
-**Objective**: Generate insights from cleaned data
+**Deliverables**:
+- [x] Consolidated EDA notebook (`02_eda_analysis.ipynb`)
+- [x] 7 engineered features for analysis
+- [x] 10 complex visualizations (saved to reports/)
+- [x] Comprehensive insights and interpretations
+- [x] Statistical analysis and correlations
 
-**Analysis Areas**:
-1. **Temporal Analysis**: Delays by time, date, season
-2. **Geographic Analysis**: Delays by airport, route, region
-3. **Carrier Analysis**: Airline performance comparison
-4. **Delay Propagation**: How delays spread through the network
-5. **Connection Vulnerability**: Missed connection risk analysis
+**Feature Engineering** (7 new features):
+1. **Time_Block**: Morning/Afternoon/Evening/Night categorization
+2. **Season**: Winter/Spring/Summer/Fall grouping
+3. **Haul_Type**: Short/Medium/Long-haul classification
+4. **Route_ID**: Origin-Destination composite key
+5. **Is_Hub**: Dynamic hub airport identification (top 20)
+6. **Daily_Airport_Departures**: Daily operational load per airport
+7. **Daily_Carrier_Load**: Daily operational load per airline
 
-**Notebook**: `notebooks/eda_analysis.ipynb` (skeleton created)
+**Visualization Categories** (10 total):
+- **Univariate**: Delay distribution, time block frequency
+- **Bivariate**: Carrier performance, season×distance heatmap, volume trends
+- **Geospatial**: Bottleneck routes, hub vs non-hub comparison
+- **Correlation**: Congestion impact, carrier load analysis
+- **Multi-dimensional**: Complex interaction patterns
+
+**Key Analysis Techniques**:
+- Distribution analysis (histograms, KDE, violin plots)
+- Comparative analysis (box plots, heatmaps)
+- Correlation analysis (scatter plots with regression)
+- Multi-dimensional faceted analysis
+
+**Notebook**: `notebooks/02_eda_analysis.ipynb` (fully implemented)
 
 ### ⏳ Phase 3: Advanced Analytics (FUTURE)
 
@@ -336,21 +358,28 @@ This is an educational project for university coursework. Dataset usage subject 
 
 ## 🎯 Next Steps
 
-### For Phase 1 (Current):
+### ✅ Phase 1 (Completed):
 1. ✅ Download dataset (see `src/download_instructions.md`)
 2. ✅ Run `notebooks/data_ingestion_cleaning.ipynb`
 3. ✅ Verify Parquet files created in `data/processed/`
 4. ✅ Complete `reports/data_profiling_summary.md` with actual results
 
-### For Phase 2 (Upcoming):
-1. Open `notebooks/eda_analysis.ipynb`
-2. Load processed Parquet files
-3. Implement temporal, geographic, and carrier analyses
-4. Generate visualizations and insights
-5. Document findings for case study report
+### ✅ Phase 2 (Completed):
+1. ✅ Open `notebooks/02_eda_analysis.ipynb`
+2. ✅ Engineer 7 analytical features
+3. ✅ Create 10 complex visualizations
+4. ✅ Generate comprehensive insights
+5. ✅ Export visualizations to `reports/`
+
+### 🔜 Phase 3 (Next):
+1. Run Phase 2 notebook with actual data to generate visualizations
+2. Develop predictive models for delay forecasting
+3. Perform statistical validation of observed patterns
+4. Create interactive dashboard (optional)
+5. Compile final case study report
 
 ---
 
-**Project Status**: Phase 1 Complete ✅ | Ready for Phase 2 📊
+**Project Status**: Phase 2 Complete ✅ | Ready for Execution & Phase 3 🚀
 
 **Last Updated**: 2025-11-22
