@@ -1,0 +1,57 @@
+# Flight Delay Analysis - Git Ignore File
+
+# Data files (large datasets should not be committed to git)
+data/raw/*.csv
+data/raw/*.zip
+data/processed/*.parquet
+*.csv
+*.parquet
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+temp/
+tmp/
+
+# OS files
+Thumbs.db
+.DS_Store

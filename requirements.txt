@@ -1,0 +1,29 @@
+# Flight Delay Analysis - Python Dependencies
+# Phase 1: Data Ingestion & Preparation
+
+# Core data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Data visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# File format support
+pyarrow>=12.0.0  # For Parquet file support
+fastparquet>=2023.4.0  # Alternative Parquet engine
+
+# Jupyter notebook support
+jupyter>=1.0.0
+notebook>=6.5.0
+ipykernel>=6.22.0
+
+# Optional: Data profiling tools
+# pandas-profiling>=3.6.0  # Uncomment if needed for automated profiling
+
+# Optional: Progress bars for long operations
+# tqdm>=4.65.0  # Uncomment if needed
+
+# Development tools (optional)
+# black>=23.3.0  # Code formatter
+# flake8>=6.0.0  # Linter
